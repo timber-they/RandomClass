@@ -1,0 +1,23 @@
+<idea-plugin>
+    <id>de.dps.RandomClass</id>
+    <name>Random Class</name>
+    <vendor email="timo@teemze.de" url="http://www.teemze.de">TeEmZe</vendor>
+
+    <description>Opens random java classes. This is useful, if you want to document your code, for example.</description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="RandomAction" class="RandomAction" text="Open Random Class" description="Opens a random .java file from the project">
+            <add-to-group group-id="FileMenu" anchor="first" />
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt O" />
+        </action>
+    </actions>
+</idea-plugin>
